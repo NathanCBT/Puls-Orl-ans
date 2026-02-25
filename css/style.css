@@ -1,0 +1,272 @@
+:root {
+  --bg-dark: #232121;
+  --red-puls: #ec5140;
+  --cyan-puls: #3aadab;
+  --white: #ffffff;
+  --gray-light: #f4f4f4;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  border-bottom: 1px solid rgba(236, 81, 64, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-dark);
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-content a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.header-content a:hover {
+  color: var(--red-puls);
+}
+
+.burger-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--red-puls);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* ligne rouge */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 2px;
+  height: 85%;
+  background: var(--red-puls);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid var(--red-puls);
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.control-btn {
+  background: transparent;
+  border: 2px solid var(--red-puls);
+  color: var(--white);
+  padding: 12px 25px;
+  border-radius: 50px; /* Style Pill */
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+  max-width: 250px;
+}
+
+.control-btn.active,
+.control-btn:hover {
+  background: var(--red-puls);
+  box-shadow: 0 0 15px rgba(236, 81, 64, 0.4);
+}
+
+.control-btn i {
+  font-size: 1.2rem;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.about,
+.form-part {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(236, 81, 64, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+  margin: 60px 0;
+  width: 48%;
+  position: relative;
+}
+
+.about {
+  margin-right: auto;
+  border-color: var(--red-puls);
+}
+.form-part {
+  margin-left: auto;
+  border-color: var(--cyan-puls);
+}
+
+h2 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.form-part ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.form-part ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-part ul li::before {
+  content: "•";
+  color: var(--cyan-puls);
+  font-weight: bold;
+}
+
+form ul {
+  list-style: none;
+}
+
+form li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  background: var(--white);
+  border: none;
+  padding: 12px 15px;
+  border-radius: 25px;
+  width: 100%;
+  font-family: inherit;
+}
+
+textarea {
+  border-radius: 15px;
+  height: 120px;
+  resize: none;
+}
+
+.submit-btn {
+  background: var(--red-puls);
+  color: var(--white);
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  background: #d44334;
+}
+
+footer {
+  background-color: #1a1818;
+  padding: 40px 5%;
+  text-align: center;
+  border-top: 1px solid rgba(58, 173, 171, 0.2);
+}
+
+.footer-social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  color: var(--cyan-puls);
+}
