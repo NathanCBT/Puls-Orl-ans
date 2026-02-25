@@ -129,13 +129,26 @@ if (!file_exists($pmrCacheFile) || (time() - filemtime($pmrCacheFile) > $cacheTi
         <section id="a-propos">
             <div class="about">
                 <h2>Pourquoi Puls'Orléans ?</h2>
-                <p>Puls'Orléans est un projet que j’ai réalisé en dehors du temps de ma formation de Bachelor
-                    Développeur
-                    Full-Stack.
-                    Ce projet m’a permis de découvrir la manipulation d’APIs et d'améliorer mes compétences dans la
-                    conception
-                    d’interfaces pour agréables et utiles pour les utilisateurs.
+                <p>Puls'Orléans a pour objectif de centraliser et rendre accessibles des données publiques locales
+                    (qualité de l’air, défibrillateurs, accessibilité PMR) au sein d’une carte interactive simple et
+                    lisible.
+                    L’ambition du projet est double :
                 </p>
+                <ul>
+                    <li>proposer un outil utile pour les Orléanais</li>
+                    <li>mettre en
+                        pratique l’intégration d’API publiques, la manipulation de données JSON et la
+                        cartographie
+                        web</li>
+                </ul>
+                <p>Puls’Orléans est né de l’idée qu’une carte interactive peut devenir un outil utile au quotidien :</p>
+                <ul>
+                    <li>localiser les défibrillateurs en cas d'urgence, vérifier la qualité de l’air ou identifier des
+                        accès
+                        adaptés.
+                        Ce projet m’a permis de relier technique et utilité réelle.
+                    </li>
+                </ul>
             </div>
         </section>
         <section id="contact">
