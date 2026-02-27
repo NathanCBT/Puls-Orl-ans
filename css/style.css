@@ -167,10 +167,26 @@ header {
 }
 
 .about {
+  background-color: var(--bg-dark);
   margin-right: auto;
   border-color: var(--red-puls);
 }
+
+.about ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about ul li::before {
+  content: "•";
+  color: var(--red-puls);
+  font-weight: bold;
+}
+
 .form-part {
+  background-color: var(--bg-dark);
   margin-left: auto;
   border-color: var(--cyan-puls);
 }
